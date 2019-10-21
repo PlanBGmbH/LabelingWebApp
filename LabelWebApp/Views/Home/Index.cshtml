@@ -1,0 +1,23 @@
+﻿@model  LabelWebApp.Models.IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+    var imgSrc = $"data:image/png;base64,{Model.imageObj}";
+    
+}
+
+
+@using (Html.BeginForm("OnPostValues", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.TextBoxFor(i => i.NameValue, null, new { @placeholder = "Your Name" });
+    @Html.TextBoxFor(i => i.CompanyValue, null, new { @placeholder = "Your Company" });
+    @Html.TextBoxFor(i => i.TitleValue, null, new { @placeholder = "Your Title" });
+    @Html.TextBoxFor(i => i.EmailValue, null, new { @placeholder = "Your Email" });
+    @Html.TextBoxFor(i => i.PhoneValue, null, new { @placeholder = "Your Phonenumber" });
+    @Html.TextBoxFor(i => i.FileName, null, new { @placeholder = "Your Filename" });
+    @Html.TextBoxFor(i => i.BarcodeValue, null, new { @placeholder = "barcode" });
+    <input type="submit" value="Bestätigen" />
+
+}
+
+<img src="@imgSrc" />
+
