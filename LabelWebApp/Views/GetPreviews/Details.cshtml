@@ -1,0 +1,82 @@
+﻿@model LabelWebApp.GetPreview
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GetPreview</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Artikelname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artikelname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Artikeltyp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artikeltyp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Artikeldaten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Artikeldaten)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EtikettenVariante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EtikettenVariante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kundenartikelnummer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kundenartikelnummer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Barcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Barcode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Etikett)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Etikett)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

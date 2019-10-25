@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LabelStorageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LabelStorage.dbo.GetLabelPreviewView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GetLabelPreviewView">
+    <Key>
+      <PropertyRef Name="Atrikelnummer" />
+      <PropertyRef Name="Kundenlogonummer" />
+    </Key>
+    <Property Name="Atkelname" Type="varchar" MaxLength="255" />
+    <Property Name="Atrikelnummer" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Artikeltyp" Type="varchar" MaxLength="255" />
+    <Property Name="Kundenlogonummer" Type="int" Nullable="false" />
+    <Property Name="Artikeldaten" Type="int" />
+    <Property Name="EtikettenVariante" Type="int" />
+    <Property Name="Expr1" Type="varchar" MaxLength="255" />
+    <Property Name="Expr2" Type="varchar" MaxLength="255" />
+    <Property Name="Expr3" Type="varchar" MaxLength="255" />
+    <Property Name="Logo" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="LabelStorageModelStoreContainer">
+    <EntitySet Name="GetLabelPreviewView" EntityType="Self.GetLabelPreviewView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GetLabelPreviewView].[Atkelname] AS [Atkelname], 
+    [GetLabelPreviewView].[Atrikelnummer] AS [Atrikelnummer], 
+    [GetLabelPreviewView].[Artikeltyp] AS [Artikeltyp], 
+    [GetLabelPreviewView].[Kundenlogonummer] AS [Kundenlogonummer], 
+    [GetLabelPreviewView].[Artikeldaten] AS [Artikeldaten], 
+    [GetLabelPreviewView].[EtikettenVariante] AS [EtikettenVariante], 
+    [GetLabelPreviewView].[Expr1] AS [Expr1], 
+    [GetLabelPreviewView].[Expr2] AS [Expr2], 
+    [GetLabelPreviewView].[Expr3] AS [Expr3], 
+    [GetLabelPreviewView].[Logo] AS [Logo]
+    FROM [dbo].[GetLabelPreviewView] AS [GetLabelPreviewView]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LabelStorageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LabelStorage.dbo.GetLabelData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GetLabelData">
+    <Key>
+      <PropertyRef Name="Kundenlogonummer" />
+      <PropertyRef Name="Artikelnummer" />
+    </Key>
+    <Property Name="Kundenartikelnummer" Type="varchar" MaxLength="255" />
+    <Property Name="Barcode" Type="varchar" MaxLength="255" />
+    <Property Name="Artikelname" Type="varchar" MaxLength="255" />
+    <Property Name="Artikelnummer" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Artikeltyp" Type="varchar" MaxLength="255" />
+    <Property Name="Kundenlogonummer" Type="int" Nullable="false" />
+    <Property Name="Artikeldaten" Type="int" />
+    <Property Name="EtikettenVariante" Type="int" />
+    <Property Name="Etikett" Type="varchar" MaxLength="255" />
+    <Property Name="Expr1" Type="varchar" MaxLength="255" />
+    <Property Name="Expr2" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Expr3" Type="varchar" MaxLength="255" />
+    <Property Name="Expr4" Type="int" Nullable="false" />
+    <Property Name="Expr5" Type="int" />
+    <Property Name="Expr6" Type="int" />
+    <Property Name="Logo" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="LabelStorageModelStoreContainer">
+    <EntitySet Name="GetLabelData" EntityType="Self.GetLabelData" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GetLabelData].[Kundenartikelnummer] AS [Kundenartikelnummer], 
+    [GetLabelData].[Barcode] AS [Barcode], 
+    [GetLabelData].[Artikelname] AS [Artikelname], 
+    [GetLabelData].[Artikelnummer] AS [Artikelnummer], 
+    [GetLabelData].[Artikeltyp] AS [Artikeltyp], 
+    [GetLabelData].[Kundenlogonummer] AS [Kundenlogonummer], 
+    [GetLabelData].[Artikeldaten] AS [Artikeldaten], 
+    [GetLabelData].[EtikettenVariante] AS [EtikettenVariante], 
+    [GetLabelData].[Etikett] AS [Etikett], 
+    [GetLabelData].[Expr1] AS [Expr1], 
+    [GetLabelData].[Expr2] AS [Expr2], 
+    [GetLabelData].[Expr3] AS [Expr3], 
+    [GetLabelData].[Expr4] AS [Expr4], 
+    [GetLabelData].[Expr5] AS [Expr5], 
+    [GetLabelData].[Expr6] AS [Expr6], 
+    [GetLabelData].[Logo] AS [Logo]
+    FROM [dbo].[GetLabelData] AS [GetLabelData]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

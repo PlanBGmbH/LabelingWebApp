@@ -1,11 +1,22 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿// <copyright file="BundleConfig.cs" company="PlanB. GmbH">
+//     Copyright (c) PlanB. GmbH.  All rights reserved.
+// </copyright>
 
 namespace LabelWebApp
 {
+    using System.Web.Optimization;
+
+    /// <summary>
+    /// Class BundleConfig.
+    /// </summary>
     public class BundleConfig
     {
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
+
+        /// <summary>
+        /// Registers the bundles.
+        /// </summary>
+        /// <param name="bundles">The bundles.</param>
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(

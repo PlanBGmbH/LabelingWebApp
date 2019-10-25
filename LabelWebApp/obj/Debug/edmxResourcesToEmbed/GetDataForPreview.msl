@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LabelStorageModelStoreContainer" CdmEntityContainer="LabelEntety">
+    <EntitySetMapping Name="GetLabelDatas">
+      <EntityTypeMapping TypeName="LabelStorageModel.GetLabelData">
+        <MappingFragment StoreEntitySet="GetLabelData">
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Expr6" ColumnName="Expr6" />
+          <ScalarProperty Name="Expr5" ColumnName="Expr5" />
+          <ScalarProperty Name="Expr4" ColumnName="Expr4" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Etikett" ColumnName="Etikett" />
+          <ScalarProperty Name="EtikettenVariante" ColumnName="EtikettenVariante" />
+          <ScalarProperty Name="Artikeldaten" ColumnName="Artikeldaten" />
+          <ScalarProperty Name="Kundenlogonummer" ColumnName="Kundenlogonummer" />
+          <ScalarProperty Name="Artikeltyp" ColumnName="Artikeltyp" />
+          <ScalarProperty Name="Artikelnummer" ColumnName="Artikelnummer" />
+          <ScalarProperty Name="Artikelname" ColumnName="Artikelname" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Kundenartikelnummer" ColumnName="Kundenartikelnummer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

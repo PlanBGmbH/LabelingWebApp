@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LabelStorageModelStoreContainer" CdmEntityContainer="LabelStorageEntities1">
+    <EntitySetMapping Name="GetLabelPreviewViews">
+      <EntityTypeMapping TypeName="LabelStorageModel.GetLabelPreviewView">
+        <MappingFragment StoreEntitySet="GetLabelPreviewView">
+          <ScalarProperty Name="Atkelname" ColumnName="Atkelname" />
+          <ScalarProperty Name="Atrikelnummer" ColumnName="Atrikelnummer" />
+          <ScalarProperty Name="Artikeltyp" ColumnName="Artikeltyp" />
+          <ScalarProperty Name="Kundenlogonummer" ColumnName="Kundenlogonummer" />
+          <ScalarProperty Name="Artikeldaten" ColumnName="Artikeldaten" />
+          <ScalarProperty Name="EtikettenVariante" ColumnName="EtikettenVariante" />
+          <ScalarProperty Name="Expr1" ColumnName="Expr1" />
+          <ScalarProperty Name="Expr2" ColumnName="Expr2" />
+          <ScalarProperty Name="Expr3" ColumnName="Expr3" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

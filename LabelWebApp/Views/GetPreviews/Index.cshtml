@@ -1,0 +1,75 @@
+﻿@model IEnumerable<LabelWebApp.GetPreview>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Artikelname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artikeltyp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artikeldaten)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EtikettenVariante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kundenartikelnummer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Barcode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Etikett)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artikelname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artikeltyp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Artikeldaten)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EtikettenVariante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kundenartikelnummer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Barcode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Etikett)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Logo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
