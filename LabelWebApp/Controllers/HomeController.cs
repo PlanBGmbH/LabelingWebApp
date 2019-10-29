@@ -76,7 +76,7 @@ namespace LabelWebApp.Controllers
             printEngine.Initialize();
 
             // Open label that will be printed
-            ILabel label = printEngine.OpenLabel(@"C:\Users\PeterS\Desktop\Labels\GetLabelPreviewSample.nlbl");
+            ILabel label = printEngine.OpenLabel(@"C:\Users\PeterS\Desktop\labels\GetLabelPreviewSample.nlbl");
 
             // get the location of the image
             picture = string.Empty;
@@ -154,7 +154,7 @@ namespace LabelWebApp.Controllers
         /// </summary>
         /// <param name="index">The index.</param>
         /// <returns>View Index.</returns>
-        private ActionResult OnPostValues(IndexModel index)
+        public ActionResult OnPostValues(IndexModel index)
         {
             index.imageObj = this.GetImagePreviewAsBase64();
             return this.View("../Home/Index", index);
