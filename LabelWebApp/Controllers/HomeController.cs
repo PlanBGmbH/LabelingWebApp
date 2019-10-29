@@ -117,8 +117,8 @@ namespace LabelWebApp.Controllers
             labelPreviewSettings.FormatPreviewSide = FormatPreviewSide.FrontSide;
 
             // set the dimensions of the preview
-            labelPreviewSettings.Width = 500;
-            labelPreviewSettings.Height = 500;
+            labelPreviewSettings.Width = 1000;
+            labelPreviewSettings.Height = 1000;
 
             // Generate Preview File as bytemap
             var rawImage = label.GetLabelPreview(labelPreviewSettings) as byte[];
