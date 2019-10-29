@@ -65,8 +65,10 @@ namespace LabelWebApp.Controllers
         /// <param name="barcode">The barcode.</param>
         /// <param name="picture">The picture.</param>
         /// <returns>image bitmap for preview.</returns>
-        private string GetImagePreviewAsBase64(string name, string company, string title, string email, string phone, string filename, string barcode, string picture)
+        private string GetImagePreviewAsBase64()
         {
+            // Gets the path of the Picture
+            string picture = "";
             // Create Printengine object
             IPrintEngine printEngine = PrintEngineFactory.PrintEngine;
 
@@ -154,14 +156,7 @@ namespace LabelWebApp.Controllers
         /// <returns>View Index.</returns>
         private ActionResult OnPostValues(IndexModel index)
         {
-            index.NameValue = this.Request.Form["NameValue"];
-            index.CompanyValue = this.Request.Form["CompanyValue"];
-            index.TitleValue = this.Request.Form["TitleValue"];
-            index.EmailValue = this.Request.Form["EmailValue"];
-            index.PhoneValue = this.Request.Form["PhoneValue"];
-            index.FileName = "asd";
-
-            index.imageObj = this.GetImagePreviewAsBase64(index.NameValue, index.CompanyValue, index.TitleValue, index.EmailValue, index.PhoneValue, index.FileName, index.BarcodeValue, index.PictureValue);
+            index.imageObj = this.GetImagePreviewAsBase64();
             return this.View("../Home/Index", index);
         }
     }
